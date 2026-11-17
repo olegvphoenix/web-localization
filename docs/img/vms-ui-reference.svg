@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 260" width="1140" height="260" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#222" role="img" aria-label="Цепочка vms-ui: разработчик пишет английский источник, Crowdin получает его и отдаёт переводы в localizationpackages, план собирает nupkg на каждый язык с OEM-патчами и публикует в Artifactory, сборка vms-ui подключает пакеты закреплённой версии.">
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,8 L8,4 z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="28" font-size="15" font-weight="bold">vms-ui: переводы приходят пакетом</text>
+
+  <!-- 1 -->
+  <rect x="20" y="56" width="180" height="84" rx="4" fill="#fff" stroke="#555"/>
+  <text x="110" y="78" text-anchor="middle" font-weight="bold">axxonnext.vms-ui</text>
+  <text x="110" y="98" text-anchor="middle">английский источник</text>
+  <text x="110" y="116" text-anchor="middle" fill="#666" font-size="11">StringResources.resx</text>
+
+  <!-- 2 -->
+  <rect x="250" y="56" width="180" height="84" rx="4" fill="#fff" stroke="#555"/>
+  <text x="340" y="78" text-anchor="middle" font-weight="bold">Crowdin</text>
+  <text x="340" y="98" text-anchor="middle">проект Axxon One Base</text>
+  <text x="340" y="116" text-anchor="middle" fill="#666" font-size="11">перевод · вычитка en</text>
+
+  <!-- 3 -->
+  <rect x="480" y="56" width="180" height="84" rx="4" fill="#fff" stroke="#555"/>
+  <text x="570" y="78" text-anchor="middle" font-weight="bold">localizationpackages</text>
+  <text x="570" y="98" text-anchor="middle">.resx и .wxl, 34 языка</text>
+  <text x="570" y="116" text-anchor="middle" fill="#666" font-size="11">включая en и ru</text>
+
+  <!-- 4 -->
+  <rect x="710" y="56" width="180" height="84" rx="4" fill="#fff" stroke="#555"/>
+  <text x="800" y="78" text-anchor="middle" font-weight="bold">Artifactory</text>
+  <text x="800" y="98" text-anchor="middle" font-size="11">AxxonSoft.Localization.&lt;lang&gt;</text>
+  <text x="800" y="116" text-anchor="middle" fill="#666" font-size="11">1.0.N · семейство на OEM</text>
+
+  <!-- 5 -->
+  <rect x="940" y="56" width="180" height="84" rx="6" fill="#f4fbf4" stroke="#8c8"/>
+  <text x="1030" y="78" text-anchor="middle" font-weight="bold" fill="#3a7a3a">сборка vms-ui</text>
+  <text x="1030" y="98" text-anchor="middle">PackageReference на язык</text>
+  <text x="1030" y="116" text-anchor="middle" fill="#666" font-size="11">LocalizationVersion=1.0.61</text>
+
+  <!-- arrows -->
+  <line x1="200" y1="98" x2="246" y2="98" stroke="#444" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+  <text x="223" y="90" text-anchor="middle" fill="#444" font-size="10">источник</text>
+
+  <line x1="430" y1="98" x2="476" y2="98" stroke="#444" marker-end="url(#ar)"/>
+  <text x="453" y="90" text-anchor="middle" fill="#444" font-size="10">выгрузка</text>
+
+  <line x1="660" y1="98" x2="706" y2="98" stroke="#444" marker-end="url(#ar)"/>
+  <text x="683" y="90" text-anchor="middle" fill="#444" font-size="10">план</text>
+
+  <line x1="890" y1="98" x2="936" y2="98" stroke="#444" marker-end="url(#ar)"/>
+  <text x="913" y="90" text-anchor="middle" fill="#444" font-size="10">restore</text>
+
+  <!-- notes under boxes -->
+  <text x="110" y="164" text-anchor="middle" fill="#666" font-size="11">разработчик пишет</text>
+  <text x="110" y="180" text-anchor="middle" fill="#666" font-size="11">только английский</text>
+
+  <text x="340" y="164" text-anchor="middle" fill="#666" font-size="11">источник — утилитой</text>
+  <text x="340" y="180" text-anchor="middle" fill="#666" font-size="11">синхронизации или вручную</text>
+
+  <text x="570" y="164" text-anchor="middle" fill="#666" font-size="11">коммитит только</text>
+  <text x="570" y="180" text-anchor="middle" fill="#666" font-size="11">команда локализации</text>
+
+  <text x="800" y="164" text-anchor="middle" fill="#666" font-size="11">план накладывает</text>
+  <text x="800" y="180" text-anchor="middle" fill="#666" font-size="11">OEM-патчи строк</text>
+
+  <text x="1030" y="164" text-anchor="middle" fill="#666" font-size="11">нет перевода — английский</text>
+  <text x="1030" y="180" text-anchor="middle" fill="#666" font-size="11">разработчика, не пакета</text>
+
+  <line x1="20" y1="204" x2="1120" y2="204" stroke="#eee"/>
+  <text x="20" y="228" fill="#3a7a3a">В репозитории кода — ни одного перевода. Версия переводов закреплена, её поднимает разработчик одной строкой.</text>
+  <text x="20" y="248" fill="#666" font-size="11">Пунктир — как именно источник vms-ui попадает в Crowdin, утилитой синхронизации или вручную, не проверено.</text>
+</svg>

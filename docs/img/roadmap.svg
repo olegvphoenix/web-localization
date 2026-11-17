@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 470" width="1180" height="470" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#222" role="img" aria-label="Пять этапов: предусловия (задачи Т1а, Т1б, Т2), репозиторий переводов (Т3 — перенос переводов, Т4 — обязательная проверка на PR и npm-пакет в плане переводов), выгрузка Crowdin (Т5, Т6), переключение веб-клиента — сборщики поднимают версию пакета (Т7), затем переводы из пакета (Т8), и права (Т9). Внутри этапов стрелки показывают порядок задач, внизу каждого этапа — что нужно на входе.">
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,8 L8,4 z" fill="#444"/>
+    </marker>
+    <marker id="arb" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,8 L8,4 z" fill="#1a73e8"/>
+    </marker>
+  </defs>
+
+  <!-- time axis -->
+  <line x1="20" y1="14" x2="1156" y2="14" stroke="#bbb" marker-end="url(#ar)"/>
+
+  <!-- ===== Stage 0 ===== -->
+  <rect x="20" y="28" width="236" height="382" rx="6" fill="#f6f6f6" stroke="#bbb"/>
+  <text x="32" y="50" font-weight="bold">Этап 0 · предусловия</text>
+
+  <rect x="32" y="66" width="212" height="32" rx="4" fill="#fff" stroke="#555"/>
+  <text x="42" y="87">Т1а, Т1б · ветка и npm</text><text x="236" y="87" text-anchor="end" fill="#888" font-size="10">DevOps</text>
+  <rect x="32" y="106" width="212" height="32" rx="4" fill="#fff" stroke="#555"/>
+  <text x="42" y="127">Т2 · коды и описание языков</text><text x="236" y="127" text-anchor="end" fill="#888" font-size="10">DDOC</text>
+
+  <!-- ===== Stage 1 ===== -->
+  <rect x="272" y="28" width="206" height="382" rx="6" fill="#f2f7fd" stroke="#9cc0ea"/>
+  <text x="284" y="50" font-weight="bold">Этап 1 · репозиторий</text>
+  <text x="284" y="64" font-weight="bold">переводов</text>
+
+  <rect x="284" y="86" width="182" height="32" rx="4" fill="#fff" stroke="#1a73e8"/>
+  <text x="294" y="107">Т3 · перенос переводов</text><text x="458" y="107" text-anchor="end" fill="#888" font-size="10">DDOC</text>
+  <line x1="375" y1="118" x2="375" y2="142" stroke="#1a73e8" marker-end="url(#arb)"/>
+  <rect x="284" y="142" width="182" height="32" rx="4" fill="#fff7e6" stroke="#e0a030"/>
+  <text x="294" y="163">Т4 · проверка на PR, npm</text><text x="458" y="163" text-anchor="end" fill="#888" font-size="10">ACR</text>
+  <text x="294" y="192" fill="#666" font-size="10">проверка на PR: JSON,</text>
+  <text x="294" y="205" fill="#666" font-size="10">дубли ключей, набор файлов</text>
+
+  <text x="284" y="370" fill="#666" font-size="11">вход: Т2 → Т3, Т1а, Т1б → Т4</text>
+
+  <!-- ===== Stage 2 ===== -->
+  <rect x="494" y="28" width="206" height="382" rx="6" fill="#f2f7fd" stroke="#9cc0ea"/>
+  <text x="506" y="50" font-weight="bold">Этап 2 · выгрузка</text>
+  <text x="506" y="64" font-weight="bold">из Crowdin</text>
+
+  <rect x="506" y="86" width="182" height="32" rx="4" fill="#fff" stroke="#1a73e8"/>
+  <text x="516" y="107">Т5 · Crowdin sync</text><text x="680" y="107" text-anchor="end" fill="#888" font-size="10">ROBO</text>
+  <line x1="597" y1="118" x2="597" y2="142" stroke="#1a73e8" marker-end="url(#arb)"/>
+  <rect x="506" y="142" width="182" height="32" rx="4" fill="#fff" stroke="#1a73e8"/>
+  <text x="516" y="163">Т6 · выгрузка</text><text x="680" y="163" text-anchor="end" fill="#888" font-size="10">DDOC</text>
+
+  <text x="506" y="200" fill="#666" font-size="11">режим синхронизации</text>
+  <text x="506" y="216" fill="#666" font-size="11">источника;</text>
+  <text x="506" y="232" fill="#666" font-size="11">прямо перед</text>
+  <text x="506" y="248" fill="#666" font-size="11">переключением приложения</text>
+
+  <text x="506" y="370" fill="#666" font-size="11">вход: Т3</text>
+
+  <!-- ===== Stage 3 ===== -->
+  <rect x="716" y="28" width="300" height="382" rx="6" fill="#f2f7fd" stroke="#9cc0ea"/>
+  <text x="728" y="50" font-weight="bold">Этап 3 · переключение веб-клиента</text>
+
+  <rect x="728" y="62" width="276" height="30" rx="4" fill="#fff" stroke="#555"/>
+  <text x="738" y="82">Т7 · сборщики поднимают версию</text><text x="996" y="82" text-anchor="end" fill="#888" font-size="10">ACR</text>
+  <line x1="866" y1="92" x2="866" y2="112" stroke="#1a73e8" marker-end="url(#arb)"/>
+
+  <rect x="728" y="112" width="276" height="62" rx="4" fill="#fff" stroke="#1a73e8"/>
+  <text x="738" y="132">Т8 · переводы из пакета</text><text x="996" y="132" text-anchor="end" fill="#888" font-size="10">WEBUI</text>
+  <rect x="738" y="142" width="130" height="18" rx="3" fill="#fff7e6" stroke="#e0a030"/>
+  <text x="803" y="155" text-anchor="middle" fill="#9a6400" font-size="10">сверка с источником</text>
+  <text x="878" y="155" fill="#666" font-size="10">+ правила для строк</text>
+
+  <!-- ===== Stage 4 ===== -->
+  <rect x="1032" y="28" width="128" height="382" rx="6" fill="#f6f6f6" stroke="#bbb"/>
+  <text x="1044" y="50" font-weight="bold">Этап 4</text>
+  <text x="1044" y="64" font-weight="bold">права</text>
+  <rect x="1044" y="86" width="104" height="32" rx="4" fill="#fff" stroke="#555"/>
+  <text x="1054" y="107">Т9 · права</text><text x="1142" y="107" text-anchor="end" fill="#888" font-size="10">IT</text>
+  <text x="1044" y="370" fill="#666" font-size="11">вход: Т8</text>
+
+  <!-- entry conditions under stage 3 -->
+  <text x="272" y="434" fill="#666" font-size="11">вход в этап 3: переводы перенесены, проверены и опубликованы пакетом (Т4), выгрузка переключена (Т6), порядок сборщиков записан (Т7)</text>
+
+  <!-- legend -->
+  <rect x="20" y="424" width="14" height="12" rx="2" fill="#fff7e6" stroke="#e0a030"/>
+  <text x="40" y="434" fill="#666" font-size="11">проверка переводов</text>
+  <text x="20" y="452" fill="#666" font-size="11">справа в задаче — проект Jira</text>
+</svg>

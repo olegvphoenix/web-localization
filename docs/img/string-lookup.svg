@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 466" width="1100" height="466" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#222" role="img" aria-label="Выбор языка: тег из cloud-локали или браузера превращается в код продукта по описанию языков из пакета переводов, затем проверяется по списку выпускаемых языков приложения, наличию файла в пакете и DISABLED_LANG; иначе английский. Поиск строки: четыре слоя сверху вниз — OEM на языке пользователя, OEM на английском, перевод на языке пользователя, английский из strings.json разработчика; побеждает первый найденный.">
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,8 L8,4 z" fill="#444"/>
+    </marker>
+    <marker id="arb" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,8 L8,4 z" fill="#1a73e8"/>
+    </marker>
+  </defs>
+
+  <!-- ============ Выбор языка ============ -->
+  <text x="20" y="28" font-size="15" font-weight="bold">Выбор языка</text>
+
+  <rect x="20" y="46" width="200" height="104" rx="4" fill="#fff" stroke="#555"/>
+  <text x="120" y="66" text-anchor="middle" fill="#666" font-size="11">откуда тег</text>
+  <text x="34" y="98">1  cloud-локаль</text>
+  <text x="34" y="118">2  язык браузера</text>
+
+  <line x1="220" y1="98" x2="266" y2="98" stroke="#444" marker-end="url(#ar)"/>
+  <text x="243" y="90" text-anchor="middle" fill="#444" font-size="11">de-DE</text>
+
+  <rect x="266" y="46" width="300" height="104" rx="4" fill="#f2f7fd" stroke="#1a73e8"/>
+  <text x="416" y="66" text-anchor="middle" fill="#1a73e8" font-size="11">описание языков из пакета · первое сработавшее</text>
+  <text x="280" y="88">1  точное совпадение без учёта регистра</text>
+  <text x="280" y="108">2  псевдоним: zh-TW → zh-hant, el → el-gr</text>
+  <text x="280" y="128">3  язык без региона: de-DE → de</text>
+  <text x="280" y="146" fill="#666">4  иначе en — strings.json</text>
+
+  <line x1="566" y1="98" x2="612" y2="98" stroke="#444" marker-end="url(#ar)"/>
+  <text x="589" y="90" text-anchor="middle" fill="#444" font-size="11">de</text>
+
+  <polygon points="742,46 872,98 742,150 612,98" fill="#fff" stroke="#555"/>
+  <text x="742" y="92" text-anchor="middle" font-size="11">язык в списке выпускаемых,</text>
+  <text x="742" y="108" text-anchor="middle" font-size="11">в пакете, не в DISABLED_LANG?</text>
+
+  <polyline points="872,98 900,98 900,70 928,70" fill="none" stroke="#444" marker-end="url(#ar)"/>
+  <text x="906" y="62" fill="#3a7a3a" font-size="11">да</text>
+  <rect x="928" y="52" width="150" height="36" rx="4" fill="#f4fbf4" stroke="#8c8"/>
+  <text x="1003" y="75" text-anchor="middle" fill="#3a7a3a">язык = de</text>
+
+  <polyline points="872,98 900,98 900,126 928,126" fill="none" stroke="#444" marker-end="url(#ar)"/>
+  <text x="906" y="146" fill="#a33" font-size="11">нет</text>
+  <rect x="928" y="108" width="150" height="36" rx="4" fill="#f6f6f6" stroke="#bbb"/>
+  <text x="1003" y="131" text-anchor="middle">язык = en</text>
+
+  <line x1="20" y1="190" x2="1080" y2="190" stroke="#eee"/>
+
+  <!-- ============ Поиск строки ============ -->
+  <text x="20" y="222" font-size="15" font-weight="bold">Поиск строки по ключу</text>
+  <text x="250" y="222" fill="#666" font-size="11">сверху вниз, побеждает первое найденное значение</text>
+
+  <!-- layers -->
+  <rect x="40" y="240" width="520" height="44" rx="4" fill="#f6f6f6" stroke="#999"/>
+  <text x="56" y="260" font-weight="bold">OEM · язык пользователя</text>
+  <text x="56" y="276" fill="#666" font-size="11">OEM-ресурсы вендора — брендовое значение, если оно переведено</text>
+
+  <rect x="40" y="294" width="520" height="44" rx="4" fill="#f6f6f6" stroke="#999"/>
+  <text x="56" y="314" font-weight="bold">OEM · английский</text>
+  <text x="56" y="330" fill="#666" font-size="11">OEM-ресурсы вендора — название, URL: от языка не зависят</text>
+
+  <rect x="40" y="348" width="520" height="44" rx="4" fill="#f2f7fd" stroke="#1a73e8"/>
+  <text x="56" y="368" font-weight="bold" fill="#1a73e8">Переводы · язык пользователя</text>
+  <text x="56" y="384" fill="#666" font-size="11">пакет переводов @axxon-l10n — перевод</text>
+
+  <rect x="40" y="402" width="520" height="44" rx="4" fill="#fff4f4" stroke="#d88"/>
+  <text x="56" y="422" font-weight="bold" fill="#a33">Английский · strings.json</text>
+  <text x="56" y="438" fill="#666" font-size="11">английский разработчика — все ключи, у которых нет перевода</text>
+
+  <line x1="26" y1="250" x2="26" y2="440" stroke="#444" marker-end="url(#ar)"/>
+
+  <!-- examples -->
+  <text x="620" y="252" fill="#666" font-size="11">Кто отвечает у немецкого пользователя</text>
+
+  <line x1="618" y1="316" x2="566" y2="316" stroke="#1a73e8" marker-end="url(#arb)"/>
+  <text x="626" y="320">название продукта у вендора</text>
+
+  <line x1="618" y1="370" x2="566" y2="370" stroke="#1a73e8" marker-end="url(#arb)"/>
+  <text x="626" y="374">обычная строка</text>
+
+  <line x1="618" y1="414" x2="566" y2="414" stroke="#1a73e8" marker-end="url(#arb)"/>
+  <text x="626" y="418">строки нет в немецком</text>
+
+  <line x1="618" y1="436" x2="566" y2="436" stroke="#1a73e8" marker-end="url(#arb)"/>
+  <text x="626" y="440">ключ добавлен вчера, до переводов не дошёл</text>
+</svg>
